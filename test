@@ -1,2 +1,3 @@
-test
-bbbjb
+repo=context.payload.repository.full_name
+    rname=repo.replace('/','-')
+    console.log(rname)
