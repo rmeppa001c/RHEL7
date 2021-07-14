@@ -29,7 +29,7 @@ jobs:
         name: Login to JFrog 🐸  
         uses: docker/login-action@v1
         with:
-          registry: artifactory.comcast.com
+          registry: det-docker.artifactory.comcast.com
           username: ${{ secrets.JFROG_USER_WRITER }}
           password: ${{ secrets.JFROG_PASSWORD_WRITER }}
       -
