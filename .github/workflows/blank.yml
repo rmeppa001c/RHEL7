@@ -21,10 +21,11 @@ jobs:
       - uses: actions/checkout@v2
       - name: Run script file
         run: |
-          docker login -u=${{ secrets.JFROG_USER_WRITER }} -p=${{ secrets.JFROG_PASSWORD_WRITER }}
+          
           docker build .
-          docker build -t det-docker.artifactory.comcast.com/gheactions:latest .
-          docker push det-docker.artifactory.comcast.com/gheactions:latest
+          docker build -t det-docker.artifactory.comcast.com/gheactions:v1 .
+          docker login -u=${{ secrets.JFROG_USER_WRITER }} -p=${{ secrets.JFROG_PASSWORD_WRITER }}
+          docker push det-docker.artifactory.comcast.com/gheactions:v1
           wget https://artifactory.comcast.com/artifactory/centos/filelist.gz
           touch 22223
      
