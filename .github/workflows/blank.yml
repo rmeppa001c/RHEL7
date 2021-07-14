@@ -40,6 +40,4 @@ jobs:
         with:
           push: true
           tags: det-docker.artifactory.comcast.com/testdeploy:latest
-         
-      shell: bash
       
